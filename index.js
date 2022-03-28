@@ -6,7 +6,7 @@ function findMatching(arr, string){
 
 function fuzzyMatch(arr, string){
 
-    return (arr.filter(arr => (arr.includes(string) && arr[0] == string[0])));
+    return (arr.filter(arr => (arr.includes(string) && !(arr.includes(string, string.length-1)))));
 }
 
 function matchName(obj, string){
